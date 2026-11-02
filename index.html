@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#211b18" />
+    <meta name="description" content="Lumière — пространство маникюра и заботы о себе." />
+    <title>Lumière — салон маникюра</title>
+    <link rel="preload" as="image" href="assets/hero.webp" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <a class="wordmark" href="#top" aria-label="Lumière, на главную"><span>Lumière</span><small>nail salon</small></a>
+      <button class="menu-toggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav"><span></span><span></span></button>
+      <nav class="main-nav" id="main-nav" aria-label="Главная навигация">
+        <a href="#services">Услуги</a><a href="#about">О салоне</a><a href="#reviews">Отзывы</a><a href="#contacts">Контакты</a>
+      </nav>
+      <button class="button button-pink header-book" data-booking>Записаться <span aria-hidden="true">↗</span></button>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <img class="hero-photo" src="assets/hero.webp" alt="Ухоженные руки с нежным розовым маникюром" fetchpriority="high" />
+        <div class="hero-shade"></div>
+        <div class="hero-content">
+          <p class="eyebrow light">Lumière · nail salon</p>
+          <h1 id="hero-title">Идеальный<br />маникюр<br /><em>в атмосфере заботы</em></h1>
+          <p class="hero-subtitle">Красота в деталях. Забота о вас.</p>
+          <button class="button button-pink hero-cta" data-booking>Записаться на процедуру <span aria-hidden="true">→</span></button>
+          <ul class="hero-benefits" aria-label="Преимущества салона">
+            <li><span class="benefit-icon" aria-hidden="true">◇</span><span>Профессиональные<br />мастера</span></li>
+            <li><span class="benefit-icon" aria-hidden="true">♡</span><span>Дезинфекция<br />и стерильность</span></li>
+            <li><span class="benefit-icon" aria-hidden="true">◷</span><span>Удобное<br />расположение</span></li>
+          </ul>
+        </div>
+        <a class="scroll-cue" href="#services" aria-label="Прокрутить к услугам">↓</a>
+      </section>
+
+      <div class="page-content">
+        <section class="services section" id="services" aria-labelledby="services-title">
+          <div class="section-intro">
+            <p class="eyebrow">Услуги <span></span></p>
+            <h2 id="services-title">Профессиональный уход за руками</h2>
+            <p>Выберите процедуру для вашей красоты и комфорта.</p>
+            <p class="price-note">Цены взяты из макета и требуют подтверждения салоном.</p>
+            <a class="button button-outline" href="#all-services">Все услуги <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="service-grid" id="all-services" aria-label="Услуги и цены"></div>
+        </section>
+
+        <section class="about section" id="about" aria-labelledby="about-title">
+          <img class="about-photo" src="assets/salon.webp" alt="Светлый интерьер маникюрного салона с рабочими местами" loading="lazy" />
+          <div class="about-copy">
+            <p class="eyebrow">О нас <span></span></p>
+            <h2 id="about-title">Больше, чем просто маникюр</h2>
+            <p>Lumière — пространство, где можно расслабиться, насладиться атмосферой и получить безупречный результат.</p>
+            <a class="button button-pink button-small" href="#contacts">Как нас найти <span aria-hidden="true">→</span></a>
+          </div>
+          <ul class="about-values" aria-label="Наши принципы">
+            <li><span aria-hidden="true">♧</span><span>Уютная атмосфера<br />и комфорт</span></li>
+            <li><span aria-hidden="true">◇</span><span>Качественные<br />материалы</span></li>
+            <li><span aria-hidden="true">☆</span><span>Индивидуальный<br />подход</span></li>
+          </ul>
+        </section>
+
+        <section class="reviews section" id="reviews" aria-labelledby="reviews-title">
+          <div class="reviews-heading">
+            <p class="eyebrow">Отзывы <span></span></p>
+            <h2 id="reviews-title">Что говорят наши клиенты</h2>
+          </div>
+          <div class="reviews-empty">
+            <p>Здесь появятся отзывы клиентов салона.</p>
+            <small>Добавим только реальные отзывы с разрешения авторов.</small>
+          </div>
+        </section>
+
+        <section class="contact-panel" id="contacts" aria-labelledby="contacts-title">
+          <div>
+            <p class="eyebrow light">Контакты</p>
+            <h2 id="contacts-title">Будем рады встрече</h2>
+            <p class="contact-intro">Уточните телефон и адрес салона — ссылки для звонка и маршрута появятся здесь.</p>
+          </div>
+          <div class="contact-details">
+            <div class="contact-item"><span aria-hidden="true">☎</span><div><small>Телефон</small><a id="phone-link" class="contact-value" aria-label="Телефон салона пока не указан">Телефон уточняется</a></div></div>
+            <div class="contact-item"><span aria-hidden="true">⌖</span><div><small>Адрес</small><a id="address-link" class="contact-value" aria-label="Адрес салона пока не указан">Адрес уточняется</a></div></div>
+            <div class="contact-hours"><small>Часы работы</small><span id="hours-value">Уточняются</span></div>
+          </div>
+          <button class="button button-pink" data-booking>Записаться <span aria-hidden="true">↗</span></button>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <a class="wordmark" href="#top" aria-label="Lumière, наверх"><span>Lumière</span><small>nail salon</small></a>
+      <p>© <span id="year"></span> Lumière nail salon</p>
+      <a href="#top" class="back-top">Наверх ↑</a>
+    </footer>
+
+    <dialog class="booking-dialog" aria-labelledby="booking-title">
+      <button class="dialog-close" aria-label="Закрыть окно записи">×</button>
+      <p class="eyebrow">Lumière · запись</p>
+      <h2 id="booking-title">Запишитесь на удобное время</h2>
+      <p class="booking-message">Пока салон не указал контакты для записи. Добавьте телефон или ссылку на мессенджер в настройках сайта — и кнопки здесь станут активными.</p>
+      <label class="service-select-label" for="booking-service">Выберите услугу</label>
+      <select id="booking-service" name="service"></select>
+      <div class="booking-actions">
+        <a id="booking-phone" class="button button-dark is-disabled" aria-disabled="true">Позвонить</a>
+        <a id="booking-message-link" class="button button-outline is-disabled" aria-disabled="true">Написать</a>
+      </div>
+      <small class="booking-footnote">Запись не отправляется, пока не подключён реальный контакт салона.</small>
+    </dialog>
+    <div class="dialog-backdrop" hidden></div>
+  </body>
+</html>
